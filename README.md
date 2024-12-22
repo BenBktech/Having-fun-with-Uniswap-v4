@@ -2,9 +2,6 @@
   <h1>🪙 BenBKToken (BBK)</h1>
   <p><strong>A Professional ERC20 Token with Advanced Uniswap V2 Integration</strong></p>
   <p>
-    <a href="https://github.com/yourusername/benbktoken/actions">
-      <img src="https://github.com/yourusername/benbktoken/workflows/Tests/badge.svg" alt="Tests Status" />
-    </a>
     <a href="https://opensource.org/licenses/MIT">
       <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
     </a>
@@ -108,22 +105,6 @@ Our test suite is organized into logical modules:
 - `liquidity.test.ts`: Liquidity management operations
 - `swaps.test.ts`: Token swapping functionality
 - `slippage.test.ts`: Slippage protection scenarios
-
-## 📖 Documentation
-
-Detailed documentation is available in the [`docs`](./docs) directory:
-
-- [Contract Architecture](./docs/ARCHITECTURE.md)
-- [Security Considerations](./docs/SECURITY.md)
-- [Deployment Guide](./docs/DEPLOYMENT.md)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please check our [Contributing Guidelines](./CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
