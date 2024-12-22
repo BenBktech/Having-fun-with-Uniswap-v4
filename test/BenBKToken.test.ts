@@ -434,53 +434,6 @@ describe("BenBKToken", function () {
 
       console.log(`Reserve BenBKToken After Swap: ${hre.ethers.formatEther(reserve0AfterSwap.toString())} BBK`);
       console.log(`Reserve ETH After Swap : ${hre.ethers.formatEther(reserve1AfterSwap.toString())} ETH`);
-      
-      // // Test Case 2: High liquidity pool
-      // // Add more liquidity to create a deeper pool
-      // const highLiquidityAmount = {
-      //   tokens: hre.ethers.parseEther('100000'),
-      //   eth: hre.ethers.parseEther('10')
-      // };
-      //  await benBKToken.approve(uniswapRouter.target, highLiquidityAmount.tokens);
-      // await uniswapRouter.addLiquidityETH(
-      //   benBKToken.target,
-      //   highLiquidityAmount.tokens,
-      //   0,
-      //   0,
-      //   owner.address,
-      //   (await time.latest()) + 1000,
-      //   { value: highLiquidityAmount.eth }
-      // );
-      //  // Same swap amount in high liquidity conditions
-      // const amountsOutHighLiquidity = await uniswapRouter.getAmountsOut(
-      //   largeSwapAmount,
-      //   [wethAddress, benBKToken.target]
-      // );
-      //  const balanceBeforeHighLiquidity = await benBKToken.balanceOf(owner.address);
-      
-      // await uniswapRouter.swapExactETHForTokens(
-      //   0, // No slippage protection for testing
-      //   [wethAddress, benBKToken.target],
-      //   owner.address,
-      //   (await time.latest()) + 1000,
-      //   { value: largeSwapAmount }
-      // );
-      //  const balanceAfterHighLiquidity = await benBKToken.balanceOf(owner.address);
-      // const actualReceivedHighLiquidity = balanceAfterHighLiquidity - balanceBeforeHighLiquidity;
-      //  // Assertions
-      // // 1. Verify that the actual received amount in low liquidity is less than the quoted amount
-      // expect(actualReceived).to.be.lessThan(amountsOut[1]);
-      
-      // // 2. Verify that high liquidity swap has less slippage
-      // const lowLiquiditySlippage = ((amountsOut[1] - actualReceived) * 100n) / amountsOut[1];
-      // const highLiquiditySlippage = ((amountsOutHighLiquidity[1] - actualReceivedHighLiquidity) * 100n) / amountsOutHighLiquidity[1];
-      // expect(highLiquiditySlippage).to.be.lessThan(lowLiquiditySlippage);
-      //  // 3. Verify that the high liquidity swap is closer to the quoted amount
-      // const highLiquidityDifference = ((amountsOutHighLiquidity[1] - actualReceivedHighLiquidity) * 10000n) / amountsOutHighLiquidity[1];
-      // expect(highLiquidityDifference).to.be.lessThan(100n); // Less than 1% difference
-      //  // Log results for analysis
-      // console.log(`Low Liquidity Slippage: ${lowLiquiditySlippage/100n}%`);
-      // console.log(`High Liquidity Slippage: ${highLiquiditySlippage/100n}%`);
     });
 
     it("Should handle slippage correctly with a High Liquidity Pool", async function() {
