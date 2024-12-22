@@ -1,79 +1,138 @@
-# BenBKToken - ERC20 Token with Uniswap Integration
+<div align="center">
+  <h1>🪙 BenBKToken (BBK)</h1>
+  <p><strong>A Professional ERC20 Token with Advanced Uniswap V2 Integration</strong></p>
+  <p>
+    <a href="https://github.com/yourusername/benbktoken/actions">
+      <img src="https://github.com/yourusername/benbktoken/workflows/Tests/badge.svg" alt="Tests Status" />
+    </a>
+    <a href="https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+    </a>
+    <a href="https://www.typescriptlang.org/">
+      <img src="https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://soliditylang.org/">
+      <img src="https://img.shields.io/badge/Solidity-%23363636.svg?logo=solidity&logoColor=white" alt="Solidity" />
+    </a>
+  </p>
+</div>
 
-This project implements a custom ERC20 token (BenBKToken/BBK) with Uniswap V2 integration, allowing for decentralized trading functionality. The project uses Hardhat for development and testing.
+## 📝 Overview
 
-## Features
+BenBKToken (BBK) is a professional-grade ERC20 token implementation featuring seamless Uniswap V2 integration. Built with security and flexibility in mind, it provides a robust foundation for decentralized trading and liquidity provision.
 
-- ERC20 token implementation with a max supply of 1.2M tokens
-- Uniswap V2 integration for:
-  - Liquidity provision (add/remove)
-  - Token swapping (ETH <-> BBK)
-  - Slippage protection
-- Comprehensive test suite for all functionalities
+## ✨ Key Features
 
-## Technical Stack
+- **Advanced Token Economics**
+  - Initial supply: 1M BBK
+  - Maximum supply: 1.2M BBK
+  - Controlled minting mechanism
+  
+- **Uniswap V2 Integration**
+  - Automated liquidity pair creation with WETH
+  - Liquidity management (add/remove)
+  - Token swapping capabilities
+  - Built-in slippage protection
 
-- Solidity ^0.8.28
-- Hardhat
-- OpenZeppelin Contracts
-- Uniswap V2 Protocol
+- **Security First**
+  - Comprehensive test coverage
+  - Industry-standard security patterns
+  - OpenZeppelin contract foundations
 
-## Getting Started
+## 🛠 Technical Stack
+
+- **Smart Contracts**: Solidity ^0.8.28
+- **Development Framework**: Hardhat
+- **Testing**: Chai & Hardhat Network
+- **Contract Dependencies**:
+  - OpenZeppelin Contracts
+  - Uniswap V2 Protocol
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js
+- Node.js (v16+)
 - npm or yarn
-- An Ethereum development environment
+- Git
 
 ### Installation
 
 1. Clone the repository:
-```shell
-git clone <repository-url>
+```bash
+git clone https://github.com/yourusername/benbktoken.git
 cd benbktoken
 ```
 
 2. Install dependencies:
-```shell
+```bash
 npm install
 ```
 
+3. Create a `.env` file:
+```bash
+cp .env.example .env
+# Add your environment variables
+```
+
+## 💻 Development
+
 ### Running Tests
 
-```shell
-npx hardhat test
+```bash
+# Run all tests
+npm test
+
+# Run specific test file
+npm test test/BenBKToken/deployment.test.ts
+
+# Run tests with coverage
+npm run coverage
 ```
 
-### Local Development
+### Local Deployment
 
-Start a local Hardhat node:
-```shell
-npx hardhat node
+```bash
+# Start local node
+npm run node
+
+# Deploy contracts
+npm run deploy:local
 ```
 
-## Contract Details
+## 🧪 Test Coverage
 
-The BenBKToken contract includes:
-- Initial supply of 1M tokens
-- Maximum supply of 1.2M tokens
-- Owner-only minting capability
-- Direct integration with Uniswap V2 Router and Factory
-- Automated liquidity pair creation with WETH
+Our test suite is organized into logical modules:
 
-## Testing
+- `deployment.test.ts`: Contract deployment and initialization
+- `liquidity.test.ts`: Liquidity management operations
+- `swaps.test.ts`: Token swapping functionality
+- `slippage.test.ts`: Slippage protection scenarios
 
-The test suite covers:
-- Basic token functionality
-- Liquidity management
-- Token swapping
-- Slippage protection scenarios
-- High and low liquidity pool behavior
+## 📖 Documentation
 
-## Contributing
+Detailed documentation is available in the [`docs`](./docs) directory:
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+- [Contract Architecture](./docs/ARCHITECTURE.md)
+- [Security Considerations](./docs/SECURITY.md)
+- [Deployment Guide](./docs/DEPLOYMENT.md)
 
-## License
+## 🤝 Contributing
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Contributions are welcome! Please check our [Contributing Guidelines](./CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [OpenZeppelin](https://openzeppelin.com/) for secure contract implementations
+- [Uniswap](https://uniswap.org/) for DEX infrastructure
+- The Ethereum community for continuous support and inspiration
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by BenBK</sub>
+</div>
