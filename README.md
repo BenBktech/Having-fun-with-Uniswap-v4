@@ -45,18 +45,6 @@ npm install
 npx hardhat test
 ```
 
-For gas reporting:
-```shell
-REPORT_GAS=true npx hardhat test
-```
-
-### Deployment
-
-To deploy the contract using Hardhat Ignition:
-```shell
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
-
 ### Local Development
 
 Start a local Hardhat node:
